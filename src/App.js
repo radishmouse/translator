@@ -16,17 +16,25 @@ class App extends React.Component {
   render () {
     console.log('Rendering App');
     console.log(`Top of App.render, State is now ${this.state.inputText}`);
+
+    const names = ["oakley", "milla", "angela"];
+
     return (
       <div className="App">
         <header className="App-header">
-          
-          <input 
+        <ul>
+          {
+            names.map(name => <li>{name}</li>)
+          }
+        </ul>  
+
+          {/* <input 
             onChange={ this._updateInputText }
-          />
+          /> */}
   
-          <Output
+          {/* <Output
             text={this.state.inputText}
-          />
+          /> */}
         </header>
       </div>
     );
